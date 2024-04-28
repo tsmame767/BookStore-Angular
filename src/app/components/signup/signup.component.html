@@ -1,0 +1,120 @@
+<div class="wrapper">
+    <div class="leftside">
+      <h2 class="header">BookStore</h2>
+      <h5 class="sub-header">Create your BookStore Account</h5>
+      <form
+        class="signup-form-cnt"
+        [formGroup]="registerForm"
+        (ngSubmit)="handleRegister()"
+      >
+        <div class="signup-first-last-name-cnt">
+          <mat-form-field class="abc" appearance="outline">
+            <mat-label>Enter First Name</mat-label>
+            <input
+              matInput
+              placeholder="First Name"
+              formControlName="firstName"
+            />
+            <mat-error
+              *ngIf="submitted && registerForm.get('firstName')?.errors?.['required']"
+            >
+              First Name is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="abc" appearance="outline">
+            <mat-label>Enter Last Name</mat-label>
+            <input matInput placeholder="Last Name" formControlName="lastName" />
+            <mat-error
+              *ngIf="submitted && registerForm.get('lastName')?.errors?.['required']"
+            >
+              Last Name is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your Email</mat-label>
+          <input matInput placeholder="Email" formControlName="email" />
+          <mat-error
+            *ngIf="submitted && registerForm.get('email')?.errors?.['required']"
+          >
+            Email is required
+          </mat-error>
+          <mat-error
+            *ngIf="submitted && registerForm.get('email')?.errors?.['email']"
+          >
+            Email is invalid
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your Password</mat-label>
+          <input
+            matInput
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <mat-error
+            *ngIf="submitted && registerForm.get('password')?.errors?.['required']"
+          >
+            Password is required
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your Mobile Number</mat-label>
+          <input
+            matInput
+            placeholder="Mobile Number"
+            formControlName="mobileNumber"
+          />
+          <mat-error
+            *ngIf="submitted && registerForm.get('mobileNumber')?.errors?.['required']"
+          >
+            Mobile Number is required
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Choose your Role</mat-label>
+          <mat-select formControlName="role">
+            <mat-option value="customer">Customer</mat-option>
+            <mat-option value="admin">Admin</mat-option>
+          </mat-select>
+          <mat-error
+            *ngIf="submitted && registerForm.get('role')?.errors?.['required']"
+          >
+            Role is required
+          </mat-error>
+        </mat-form-field>
+  
+        <div class="signup-signin-register-btn-cnt">
+          <button
+            class="sign-in-instead"
+            mat-button
+            type="submit"
+            (click)="handleSignIn()"
+          >
+            Sign in instead
+          </button>
+          <button
+            class="registerBtn"
+            mat-stroked-button
+            color="primary"
+            type="submit"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="rightside">
+      <div class="image-container">
+        <img src="../../../assets/img.PNG" alt="img" width="240" height="230" />
+      </div>
+      <div class="text-below-image">
+        <span>One account. All of Book Store working for you.</span>
+      </div>
+    </div>
+  </div>

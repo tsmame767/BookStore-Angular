@@ -1,0 +1,123 @@
+::ng-deep .app-signup-cnt {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(101, 0, 0, 0.1);
+    padding: 20px 25px;
+    justify-content: space-between;
+  }
+  
+  .leftside {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .rightside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+  }
+  
+  .header {
+    font-size: 20px;
+    color: #ffc107;
+  }
+  
+  .sub-header {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .signup-form-cnt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .signup-first-last-name-cnt {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Added margin between input groups */
+  }
+  
+  .abc {
+    width: 45%;
+  }
+  
+  label {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .signup-signin-register-btn-cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sign-in-instead {
+    color: #007bff;
+  }
+  
+  .registerBtn {
+    color: #fff;
+    background-color: #007bff;
+  }
+  
+  .image-container {
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  .image-container img {
+    height: auto;
+  }
+  
+  .text-below-image {
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .text-below-image span {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    .wrapper {
+      width: calc(100% - 40px);
+      padding: 10px 15px;
+    }
+  
+    .leftside {
+      width: 100%;
+    }
+  
+    .rightside {
+      display: none;
+    }
+  
+    .signup-first-last-name-cnt {
+      flex-direction: column;
+    }
+  
+    .abc {
+      width: 100%;
+    }
+  }
