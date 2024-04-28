@@ -75,6 +75,20 @@
             Mobile Number is required
           </mat-error>
         </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Enter your City</mat-label>
+            <input
+              matInput
+              placeholder="City"
+              formControlName="cityName"
+            />
+            <mat-error
+              *ngIf="submitted && registerForm.get('cityName')?.errors?.['required']"
+            >
+              City Name is required
+            </mat-error>
+          </mat-form-field>
   
         <mat-form-field appearance="outline">
           <mat-label>Choose your Role</mat-label>

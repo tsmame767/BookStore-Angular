@@ -26,6 +26,7 @@ export class SignupComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(3)]], // Updated to include password length validation
       mobileNumber: ['', [Validators.required, Validators.pattern('^[1-9]\\d{9}$')]], // Mobile number validation added
+      cityName:['', Validators.required],
       role: ['', Validators.required] // Role field added with required validation
     });
   }
@@ -39,13 +40,14 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    const { firstName, lastName, email, password, mobileNumber, role } = this.registerForm.value;
+    const { firstName, lastName, email, password, mobileNumber,cityName, role } = this.registerForm.value;
 
     // Call your register service or handle registration logic here
     this.userService.registerApi({
       name: `${firstName} ${lastName}`,
       email: email,
       phone: mobileNumber,
+      city: cityName,
       password: password,
       role: role
     }).subscribe( results =>{console.log(results)},error=>{console.log(error)});

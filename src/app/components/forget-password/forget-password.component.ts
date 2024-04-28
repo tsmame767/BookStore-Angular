@@ -16,7 +16,7 @@ export class ForgetPasswordComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required]],
          });
   }
 
@@ -32,16 +32,18 @@ export class ForgetPasswordComponent implements OnInit {
     }
     const {email}= this.loginForm.value;
 
+    
+
     this.userService.forgotPasswordApi({
-      email : email,
-    }).subscribe( results =>{localStorage.setItem("AuthToken", results.data)
-    this.router.navigate(['/ResetPassword'])
+      email : email
+    }).subscribe( results =>{
+    
 
     console.log(results);
      
     },error=>{console.log(error)});
 
-
+    this.router.navigate(['/ResetPassword'])
     console.log('Password Send successfully On your Email', this.loginForm.value);
   }
 
