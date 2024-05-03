@@ -5,16 +5,16 @@
   
   .wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* This property is declared twice, so I kept the second instance */
     align-items: center;
     margin: auto;
     width: 50%;
-    border: 1px solid #000;
+    /* border: 1px solid #000; (commented out as in your original) */
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(101, 0, 0, 0.1);
+    box-shadow: 0px 14px 40px rgba(49, 5, 5, 0.5); /* Adjusted blur radius, reduced shadow size, increased opacity */
     padding: 20px 25px;
-    justify-content: space-between;
-  }
+}
+
   
   .leftside {
     width: 60%;
@@ -31,8 +31,9 @@
   }
   
   .header {
-    font-size: 20px;
-    color: #ffc107;
+    font-size: 30px;
+    color: #8f2847;
+    
   }
   
   .sub-header {
@@ -50,11 +51,11 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-bottom: 20px; /* Added margin between input groups */
+    // margin-bottom: 20px; /* Added margin between input groups */
   }
   
   .abc {
-    width: 45%;
+    width: 48%;
   }
   
   label {
@@ -70,12 +71,12 @@
   }
   
   .sign-in-instead {
-    color: #007bff;
+    color: #8f2847;
   }
   
   .registerBtn {
     color: #fff;
-    background-color: #007bff;
+    background-color: #8f2847;
   }
   
   .image-container {

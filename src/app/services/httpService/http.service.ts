@@ -20,11 +20,15 @@ export class HttpService {
   }
 
   forgotPassword(endpoint: string, data: Object): Observable<any> {
-    return this.httpClient.post<any>(this.BaseUrl + endpoint, data); 
+    return this.httpClient.post<any>(this.BaseUrl + endpoint,data); 
   }
 
   resetPassword(endpoint: string, data: Object): Observable<any> {
     return this.httpClient.post<any>(this.BaseUrl + endpoint, data);
+  }
+
+  getBooks(endpoint:string): Observable<any>{
+    return this.httpClient.get<any>(this.BaseUrl+endpoint);
   }
 
 }

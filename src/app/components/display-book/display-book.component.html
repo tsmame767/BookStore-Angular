@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="main-div" (click)="handleBookClick()">
+        <div class="bookimg-div">
+            <img class="bookimg" src="../../assets/Image 11@2x.png" alt="Book Image">
+        </div>
+        <div class="bookinfo-div">
+            <span class="title">{{book.title}}</span><br>
+            <span class="author">by {{book.author}}</span>
+            <!-- <span class="title">BOOK-Title</span><br>
+            <span class="author">by hitler</span> -->
+            <div class="xyz">
+                <div class="rating">
+                    4.5 ★
+                </div>
+                <div class="ratings">   
+                    <p>({{book.quantity}})</p>
+                </div>
+            </div>
+            <p class="rs">Rs.{{book.price}}</p>
+            <!-- <p class="rs">Rs.1000</p> -->
+        </div>
+    </div>
+</div>

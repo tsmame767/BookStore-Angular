@@ -1,0 +1,49 @@
+<div class="dashboardheader">
+    <!-- <app-book-container>[bookList]="bookList"</app-book-container> -->
+    <div class="leftside-icon">
+        <button class="btn button" matTooltip="Home" (click)="handleHomeClick()">
+            <img src="../../assets/education.png" class="book-img" alt="book image">
+            <span class="book-store">Bookstore</span>
+        </button>
+    </div>
+    <div class="search-container">
+        <button class="search-btn" matTooltip="Search"><mat-icon class="search-icon">search</mat-icon> </button>
+        <input type="text" class="search-input" placeholder="Search">
+    </div>
+
+    <div class="rightside-icon">
+        <div class="User">
+            <button class="btn" [matMenuTriggerFor]="menu1" matTooltip="Profile">
+                <img src="../../assets/Users.PNG" class="book-img" alt="book image">
+                <div class="profile-name">
+                    <span>Profile</span>
+                </div>
+            </button>
+            <mat-menu #menu1="matMenu">
+                <button mat-menu-item >
+                    <span>Profile</span>
+                </button>
+                <button mat-menu-item >
+                    <span>My order</span>
+                </button>
+                <button mat-menu-item>
+                    <span>My WhishList</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Log Out</span>
+                </button>
+            </mat-menu>
+
+        </div>
+        <div class="Cart" (click)="handleCartClick()">
+            <button class="btn cart-btn" matTooltip="Cart">
+                <img src="../../assets/supermarket.png" class="book-img" alt="book image">
+                <div class="Cart-span">
+                    <span>Cart</span>
+                </div>
+            </button>
+        </div>
+    </div>
+
+
+</div>

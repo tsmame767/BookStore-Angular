@@ -17,11 +17,13 @@
       flex-direction: column;
       align-items: center;
       padding: 40px;
-      border: 1px solid #161716;
+      border: 1px solid #8f2847;  /* Corrected to include 'solid' */
       border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      // margin-top: 15%;
-    }
+      box-shadow: 0px 10px 30px rgba(67, 4, 14, 0.3); /* Increased blur radius and opacity */
+      border-color: #8f2847;
+      /* margin-top: 15%; (commented out as it was already commented in your snippet) */
+  }
+  
     
   //   .leftside,
   //   .rightside {
@@ -39,8 +41,8 @@
     }
     
     .header {
-      font-size: 20px;
-      color: #ffc107; /* Yellow color */
+      font-size: 25px;
+      color: #8f2847; /* Yellow color */
     }
     
     .sub-header {
@@ -83,9 +85,9 @@
         
     .registerBtn {//button {//[type="submit"] {
       color: #fff;
-      background-color: #007bff; /* Blue color */
+      background-color: #8f2847; /* Blue color */
     }
     
     .create-account, .forgot-password {
-      color: #007bff;
+      color: #8f2847;
     }

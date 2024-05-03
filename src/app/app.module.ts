@@ -9,10 +9,20 @@ import { MatFormFieldModule, matFormFieldAnimations } from '@angular/material/fo
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { SignupComponent } from './components/signup/signup.component';
 import { MatSelectModule } from '@angular/material/select';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HeaderComponent } from './components/header/header.component';
+import { DisplayBookComponent } from './components/display-book/display-book.component';
+import { BookContainerComponent } from './components/book-container/book-container.component';
+import { MatMenuModule } from '@angular/material/menu'; // Import MatMenuModule
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { QuickViewComponent } from './components/quick-view/quick-view.component';
+import { CartComponent } from './components/cart/cart.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +30,13 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     SigninComponent,
     SignupComponent,
     ForgetPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    DashboardComponent,
+    HeaderComponent,
+    DisplayBookComponent,
+    BookContainerComponent,
+    QuickViewComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +47,11 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     MatInputModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule,
+    MatMenuModule, // Add MatMenuModule here
+    MatTooltipModule, // Add MatTooltipModule here
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,13 +13,13 @@ export class UserService {
   }
 
   registerApi(data:object){
-    return this.httpService.registerUser('',data);
+    return this.httpService.registerUser('User',data);
   }
 
   forgotPasswordApi(data: object) {
-    return this.httpService.forgotPassword('User/ForgetPassword', data)
+    return this.httpService.forgotPassword('User/forgot-password', data)
   }
   resetPsswordApi(data: object) {
-    return this.httpService.resetPassword('User/ResetPassword', data)
+    return this.httpService.resetPassword('User/Reset-Password', data)
   }
 }
